@@ -12,7 +12,7 @@ if(!require(psych)){
 }
 
 ### import data ###
-data <- read.csv("Data/qualtrics_s3/qdata_20190515.csv")
+data <- read.csv("~/Documents/Nick-Grad/Neta_Lab/exercise_study/MBSR_Online/Analyses/Data/qualtrics_s3/qdata_20190515.csv")
 
 ### preview data ###
 #View(data)
@@ -58,6 +58,44 @@ data$ERQ_ES <- ERQ.data$ERQ_ES
 
 
 ### separate SWLS from data ### 
+### create SWLS dataframe ###
+SWLS.data <- data[,c(11, 139:143)]
+
+### convert choice text to numeric ###
+for(i in 2:ncol(SWLS.data)) {
+  SWLS.data[,i] <- recode(SWLS.data[,i], 
+                         "Strongly disagree" = 1,
+                         "Disagree" = 2, "Slightly disagree" = 3,
+                         "Neither agree nor disagree" = 4, "Slightly agree" = 5,
+                         "Agree" = 6, "Strongly agree" = 7)
+}
+### add items for participant scores and create column in SWLS dataframe ###
+SWLS.data$TOTAL <- (rowSums(SWLS.data[,c(2:6)], na.rm = FALSE))
+
+### add SWLS scores back to original data file ###
+data$SWLS <- SWLS.data$TOTAL
+
+### separate STAI-ST from full data ###
+### create SWLS dataframe ###
+STAI.data <- data[,c(11, 61:100)]
+
+### convert choice text to numeric ###
+for(i in 2:21) {
+  STAI.data[,i] <- recode(STAI.data[,i], 
+                          "Not at all" = 1, "Somewhat" = 2, 
+                          "Moderately so" = 3, "Very much so" = 4)
+}
+for(i in 22:41) {
+  STAI.data[,i] <- recode(STAI.data[,i], 
+                          "Almost never" = 1, "Sometimes" = 2, 
+                          "Often" = 3, "Almost always" = 4)
+}
+
+### add scores ###
+
+
+
+
 
 
 
