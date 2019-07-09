@@ -1,6 +1,6 @@
 ---
-title             : "The title"
-shorttitle        : "Title"
+title             : "Mindfulness-Based Stress Reduction Promotes Positive Interpertations of Emotional Ambiguity"
+shorttitle        : "MBSR and Positive Interpretations of Ambiguity"
 
 author: 
   - name          : "Nicholas Ross Harp"
@@ -8,14 +8,16 @@ author:
     corresponding : yes    # Define only one corresponding author
     address       : "Postal address"
     email         : "nharp@huskers.unl.edu"
-  - name          : "Ernst-August Doelle"
-    affiliation   : "1,2"
+  - name          : "Jonathan B. Freeman"
+    affiliation   : "2"
+  - name          : "Maital Neta"
+    affiliation   : "1"
 
 affiliation:
   - id            : "1"
     institution   : "University of Nebraska-Lincoln"
   - id            : "2"
-    institution   : "Konstanz Business School"
+    institution   : "New York University"
 
 authornote: |
   Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
@@ -66,20 +68,30 @@ library("papaja")
 set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
-
+# Introduction
+Mindfulness-Based Stress Reduction (MBSR; Kabat-Zinn, 1990) is an eight-week behavioral intervention program with the goal of reducing ??stress, anxiety, automatic processing?? through mindfulness meditation. Mindfulness meditation includes a number of practices; for instance, focused-breathing, body scan, and Hatha yoga (citation) are all forms of meditation used in MBSR. These practices, both in (citations) and out (citations) of the context of MBSR, affect a number of affective processes.
 
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
 
 ## Participants
-
-## Material
+Participants were recruited from MBSR courses across the United States. Inclusion criteria required that participants be age 17 or older and without prior formal mindfulness training or extensive practice (i.e., greater than 30 minutes per day for two or more days per week). Gender, age, and history of psychological or neurological disorder are shown in Table 1.  
 
 ## Procedure
+All participants were recruited through online and email advertisements shared by MBSR course instructors. All instructors were **certified** or **qualified** MBSR instructors and participants completed the entire eight-week course. MBSR courses consisted of eight weekly meetings and one retreat day near the end of the course. Participants completed weekly logs to report daily mindfulness practice, including both type (e.g., focused breathng, body scan) and duration. MBSR instructor experienced averaged = "value" (SD = "value"). 
 
+Participants completed five research sessions in total, in addition to the weekly logs. The first and second session occurred pre- and post-class on the first day of the MBSR course. Session three and four were pre- and post-class on the final day of the course, and session five was an additional eight-week follow up after the course ended. The pre-class sessions, as well as the fifth and final session, consisted of two image ratings tasks and a series of Qualtrics (cite?) surveys, while the post-class sessions only required participants to complete the two image rating tasks. 
+
+The image rating tasks included a valence bias task and a color rating task. Both tasks were forced-choice and required participants to provide an explicit judgment of the stimuli. In the valence bias task, participants provided ratings (positive, negative) of happy, angry, and surprised facial expressions. The facial expressions included faces taken from the NimStim (cite), Karolinska Directed Emotional Face(s) (cite) database, and the Umea (face set?) (cite). Unique faces were used in each session. The color rating task required participants to choose either "RED" or "BLUE" for a series (how many unique colors..?) of colors including clearly red and blue circles, as well as purple circles. Participant responses and mouse trajectories were recorded throughout the image rating task. 
+
+
+
+
+## Material
 ## Data analysis
-We used `r cite_r("r-references.bib")` for all our analyses.
+We used `r cite_r("r-references.bib")` for all our analyses. Participant resopnses to 
+We first imported raw mouse tracking data using Mousetrap and preprocessed the data for analysis. That is, raw trajectories were imported and 
 
 
 # Results
